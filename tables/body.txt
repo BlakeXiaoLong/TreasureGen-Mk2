@@ -1,0 +1,40 @@
+atlas.push_back(Item(01, 20,"Robe of infinite twine"));
+atlas.push_back(Item(21, 35,"Robe of needles"));
+atlas.push_back(Item(36, 60,"Robe of bones"));
+atlas.push_back(Item(61, 70,"Bodywrap of mighty strikes +1"));
+atlas.push_back(Item(71, 80,"Corset of the vishkanya"));
+atlas.push_back(Item(81, 100,"Druid's vestment"));
+
+atlas.push_back(Item(01, 15,"Cassock of the clergy"));
+atlas.push_back(Item(16, 30,"Mnemonic vestments"));
+atlas.push_back(Item(31, 45,"Robe of components"));
+atlas.push_back(Item(46, 60,"Sorcerer's robe"));
+atlas.push_back(Item(61, 75,"Eidolon anchoring harness"));
+atlas.push_back(Item(76, 100,"Robe of useful items"));
+
+atlas.push_back(Item(01, 15,"Robe of blending"));
+atlas.push_back(Item(16, 26,"Blazing robes"));
+atlas.push_back(Item(27, 37,"Shocking robe"));
+atlas.push_back(Item(38, 48,"Voidfrost robes"));
+atlas.push_back(Item(49, 59,"Bodywrap of mighty strikes +2"));
+atlas.push_back(Item(60, 75,"Monk's robe"));
+atlas.push_back(Item(76, 100,"Robe of arcane heritage"));
+
+atlas.push_back(Item(01, 25,"Xorn robe"));
+atlas.push_back(Item(26, 52,"Corset of dire witchcraft"));
+atlas.push_back(Item(53, 76,"Bodywrap of mighty strikes +3"));
+atlas.push_back(Item(77, 100,"Robe of scintillating colors"));
+
+atlas.push_back(Item(01, 40,"Gunman's duster"));
+atlas.push_back(Item(41, 80,"Bodywrap of mighty strikes +4"));
+atlas.push_back(Item(81, 100,"Smuggler's collapsible robe"));
+
+atlas.push_back(Item(01, 10,"Robe of stars"));
+atlas.push_back(Item(11, 15,"Robe of gates"));
+atlas.push_back(Item(16, 20,"Otherworldly kimono"));
+atlas.push_back(Item(21, 40,"Bodywrap of mighty strikes +5"));
+atlas.push_back(Item(41, 51,"Resplendent robe of the thespian"));
+atlas.push_back(Item(52, 67,"Robe of the archmagi"));
+atlas.push_back(Item(68, 77,"Bodywrap of mighty strikes +6"));
+atlas.push_back(Item(78, 97,"Robe of eyes"));
+atlas.push_back(Item(98, 100,"Bodywrap of mighty strikes +7"));

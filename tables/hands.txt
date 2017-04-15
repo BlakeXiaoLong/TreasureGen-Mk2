@@ -1,0 +1,40 @@
+atlas.push_back(Item(01, 13,"Assisting gloves"));
+atlas.push_back(Item(14, 22,"Claws of the ice bear"));
+atlas.push_back(Item(23, 34,"Gloves of reconnaissance"));
+atlas.push_back(Item(35, 46,"Glowing glove"));
+atlas.push_back(Item(47, 58,"Apprentice's cheating gloves"));
+atlas.push_back(Item(59, 70,"Challenger's gloves"));
+atlas.push_back(Item(71, 80,"Gloves of larceny"));
+atlas.push_back(Item(81, 90,"Healer's gloves"));
+atlas.push_back(Item(91, 100,"Engineer's workgloves"));
+
+atlas.push_back(Item(01, 12,"Gauntlets of the skilled maneuver"));
+atlas.push_back(Item(13, 21,"Ghostvision gloves"));
+atlas.push_back(Item(22, 33,"Gloves of arrow snaring"));
+atlas.push_back(Item(34, 43,"Trapspringer's gloves"));
+atlas.push_back(Item(44, 55,"Gloves of arcane striking"));
+atlas.push_back(Item(56, 65,"Poisoner's gloves"));
+atlas.push_back(Item(66, 75,"Magnetist's gloves"));
+atlas.push_back(Item(76, 100,"Gloves of swimming and climbing"));
+
+atlas.push_back(Item(01, 02,"Deliquescent gloves"));
+atlas.push_back(Item(03, 05,"Form, fixing gauntlets"));
+atlas.push_back(Item(06, 08,"Iron cobra gauntlet"));
+atlas.push_back(Item(09, 16,"Shadow falconer's glove"));
+atlas.push_back(Item(17, 20,"Spellstrike gloves"));
+atlas.push_back(Item(21, 28,"Glyphbane gloves"));
+atlas.push_back(Item(29, 40,"Glove of storing"));
+atlas.push_back(Item(41, 46,"Gloves of shaping"));
+atlas.push_back(Item(47, 54,"Pliant gloves"));
+atlas.push_back(Item(55, 76,"Gauntlet of rust"));
+atlas.push_back(Item(77, 100,"Gloves of dueling"));
+
+atlas.push_back(Item(01, 30,"Vampiric gloves"));
+atlas.push_back(Item(31, 65,"Giant fist gauntlets"));
+atlas.push_back(Item(66, 100,"Gloves of the shortened path"));
+
+atlas.push_back(Item(01, 40,"Gloves of the commanding conjurer"));
+atlas.push_back(Item(41, 100,"Gauntlet of rust, greater"));
+
+atlas.push_back(Item(01, 60,"Talons of Leng"));
+atlas.push_back(Item(61, 100,"Gauntlets of the weaponmaster"));

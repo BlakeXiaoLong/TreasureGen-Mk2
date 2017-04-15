@@ -1,0 +1,49 @@
+atlas.push_back(Item(01, 11,"Boots of the cat"));
+atlas.push_back(Item(12, 22,"Daredevil boots"));
+atlas.push_back(Item(23, 31,"Boots of the enduring march"));
+atlas.push_back(Item(32, 41,"Feather step slippers"));
+atlas.push_back(Item(42, 50,"Boots of friendly terrain"));
+atlas.push_back(Item(51, 60,"Boots of the winterlands"));
+atlas.push_back(Item(61, 76,"Boots of elvenkind"));
+atlas.push_back(Item(77, 85,"Acrobat slippers"));
+atlas.push_back(Item(86, 92,"Horseshoes of speed"));
+atlas.push_back(Item(93, 100,"Boots of the mire"));
+
+atlas.push_back(Item(01, 07,"Burglar boots, minor"));
+atlas.push_back(Item(08, 13,"Horseshoes of crushing blows +1"));
+atlas.push_back(Item(14, 19,"Sandals of quick reaction"));
+atlas.push_back(Item(20, 26,"Slippers of cloudwalking"));
+atlas.push_back(Item(27, 40,"Slippers of spider climbing"));
+atlas.push_back(Item(41, 46,"Sandals of the lightest step"));
+atlas.push_back(Item(47, 60,"Boots of striding and springing"));
+atlas.push_back(Item(61, 68,"Horseshoes of a zephyr"));
+atlas.push_back(Item(69, 75,"Haunted shoes"));
+atlas.push_back(Item(76, 82,"Jaunt boots"));
+atlas.push_back(Item(83, 100,"Boots of levitation"));
+
+atlas.push_back(Item(01, 08,"Boots of escape"));
+atlas.push_back(Item(09, 14,"Earth root boots"));
+atlas.push_back(Item(15, 21,"Nightmare boots"));
+atlas.push_back(Item(22, 26,"Nightmare horseshoes"));
+atlas.push_back(Item(27, 32,"Caltrop boots"));
+atlas.push_back(Item(33, 39,"Tremor boots"));
+atlas.push_back(Item(40, 47,"Boots of the mastodon"));
+atlas.push_back(Item(48, 54,"Shoes of the lightning leaping"));
+atlas.push_back(Item(55, 70,"Boots of speed"));
+atlas.push_back(Item(71, 77,"Verdant boots"));
+atlas.push_back(Item(78, 84,"Horseshoes of crushing blows +2"));
+atlas.push_back(Item(85, 100,"Winged boots"));
+
+atlas.push_back(Item(01, 38,"Shoes of the firewalker"));
+atlas.push_back(Item(39, 72,"Dryad sandals"));
+atlas.push_back(Item(73, 100,"Horseshoes of the mist"));
+
+atlas.push_back(Item(01, 20,"Getaway boots"));
+atlas.push_back(Item(21, 35,"Horseshoes of crushing blows +3"));
+atlas.push_back(Item(36, 55,"Horseshoes of glory"));
+atlas.push_back(Item(56, 75,"Burglar boots, major"));
+atlas.push_back(Item(76, 100,"Boots of teleportation"));
+
+atlas.push_back(Item(01, 40,"Slippers of the triton"));
+atlas.push_back(Item(41, 70,"Horseshoes of crushing blows +4"));
+atlas.push_back(Item(71, 100,"Horseshoes of crushing blows +5"));

@@ -1,0 +1,60 @@
+atlas.push_back(Item(01, 06,"Catching cape"));
+atlas.push_back(Item(07, 10,"Cloak of human guise"));
+atlas.push_back(Item(11, 30,"Cloak of resistance +1"));
+atlas.push_back(Item(31, 36,"Muleback cords"));
+atlas.push_back(Item(37, 38,"Shawl of life - keeping"));
+atlas.push_back(Item(39, 44,"Shield cloak"));
+atlas.push_back(Item(45, 50,"Quickchange cloak"));
+atlas.push_back(Item(51, 56,"Cowardly crouching cloak"));
+atlas.push_back(Item(57, 74,"Cloak of elvenkind"));
+atlas.push_back(Item(75, 80,"Cloak of the hedge wizard"));
+atlas.push_back(Item(81, 85,"Cloak of fiery vanishing"));
+atlas.push_back(Item(86, 94,"Cloak of fangs"));
+atlas.push_back(Item(95, 97,"Pauldrons of the serpent"));
+atlas.push_back(Item(98, 100,"Stonemist cloak"));
+
+atlas.push_back(Item(01, 26,"Cloak of resistance +2"));
+atlas.push_back(Item(27, 38,"Cloak of the scuttling rat"));
+atlas.push_back(Item(39,39,Seafoam shawl));
+atlas.push_back(Item(40, 52,"Treeform cloak"));
+atlas.push_back(Item(53, 74,"Eagle cape"));
+atlas.push_back(Item(75, 94,"Cloak of the manta ray"));
+atlas.push_back(Item(95, 100,"Hunter's cloak"));
+
+atlas.push_back(Item(01, 20,"Cloak of resistance +3"));
+atlas.push_back(Item(21, 22,"Cloak of the duskwalker"));
+atlas.push_back(Item(23, 25,"Cocoon cloak"));
+atlas.push_back(Item(26, 27,"Pauldrons of the bull"));
+atlas.push_back(Item(28, 32,"Stone cloak, minor"));
+atlas.push_back(Item(33, 40,"Cape of the mountebank"));
+atlas.push_back(Item(41, 45,"Pauldrons of the watchful lion"));
+atlas.push_back(Item(46, 52,"Lion cloak"));
+atlas.push_back(Item(53, 54,"Mantle of spores"));
+atlas.push_back(Item(55, 59,"Cape of effulgent escape"));
+atlas.push_back(Item(60, 69,"Cloak of arachnida"));
+atlas.push_back(Item(70, 72,"Gunfighter's poncho"));
+atlas.push_back(Item(73, 74,"Tentacle cloak"));
+atlas.push_back(Item(75, 76,"Demonspike pauldrons"));
+atlas.push_back(Item(77, 78,"Comfort's cloak"));
+atlas.push_back(Item(79, 88,"Cloak of resistance +4"));
+atlas.push_back(Item(89, 91,"Shawl of the crone"));
+atlas.push_back(Item(92, 100,"Prestidigitator's cloak"));
+
+atlas.push_back(Item(01, 12,"Stole of justice"));
+atlas.push_back(Item(13, 24,"Jellyfish cape"));
+atlas.push_back(Item(25, 32,"Cloak of the diplomat"));
+atlas.push_back(Item(33, 44,"Slashing cloak"));
+atlas.push_back(Item(45, 56,"Stone cloak, major"));
+atlas.push_back(Item(57, 68,"Cloak of displacement, minor"));
+atlas.push_back(Item(69, 88,"Cloak of resistance +5"));
+atlas.push_back(Item(89, 100,"Cloak of the bat"));
+
+atlas.push_back(Item(01, 40,"Highwayman's cape"));
+atlas.push_back(Item(41, 60,"Juggernaut's pauldrons"));
+atlas.push_back(Item(61, 100,"Charlatan's cape"));
+
+atlas.push_back(Item(01, 15,"Cloak of displacement, major"));
+atlas.push_back(Item(16, 35,"Wings of flying"));
+atlas.push_back(Item(36, 55,"Cloak of etherealness"));
+atlas.push_back(Item(56, 80,"Wings of the gargoyle"));
+atlas.push_back(Item(81, 100,"Wyvern cloak"));

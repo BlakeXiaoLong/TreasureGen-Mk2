@@ -1,0 +1,33 @@
+atlas.push_back(Item(01, 15,"Bandages of rapid recovery"));
+atlas.push_back(Item(16, 30,"Quick runner's shirt"));
+atlas.push_back(Item(31, 50,"Endless bandolier"));
+atlas.push_back(Item(51, 75,"All tools vest"));
+atlas.push_back(Item(76, 100,"Vest of surgery"));
+
+atlas.push_back(Item(01, 10,"Sash of the war champion"));
+atlas.push_back(Item(11, 20,"Sipping jacket"));
+atlas.push_back(Item(21, 31,"Tunic of careful casting"));
+atlas.push_back(Item(32, 42,"Vest of escape"));
+atlas.push_back(Item(43, 52,"Cackling hag's blouse"));
+atlas.push_back(Item(53, 62,"Deadshot vest"));
+atlas.push_back(Item(63, 70,"Prophet's pectoral"));
+atlas.push_back(Item(71, 79,"Tunic of deadly might"));
+atlas.push_back(Item(80, 90,"Vest of the vengeful tracker"));
+atlas.push_back(Item(91, 100,"Resplendent uniform coat"));
+
+atlas.push_back(Item(01, 13,"Shirt of immolation"));
+atlas.push_back(Item(14, 28,"Snakeskin tunic"));
+atlas.push_back(Item(29, 40,"Bane baldric"));
+atlas.push_back(Item(41, 60,"Unfettered shirt"));
+atlas.push_back(Item(61, 80,"Poisoner's jacket, lesser"));
+atlas.push_back(Item(81, 100,"Vest of the cockroach"));
+
+atlas.push_back(Item(01, 50,"Vest of stable mutation"));
+atlas.push_back(Item(51, 100,"Spectral shroud"));
+
+atlas.push_back(Item(01, 60,"Mantle of immortality"));
+atlas.push_back(Item(61, 100,"Poisoner's jacket, greater"));
+
+atlas.push_back(Item(01, 35,"Merciful baldric"));
+atlas.push_back(Item(36, 70,"Mantle of faith"));
+atlas.push_back(Item(71, 100,"Mantle of spell resistance"));

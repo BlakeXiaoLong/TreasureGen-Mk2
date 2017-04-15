@@ -1,0 +1,36 @@
+atlas.push_back(Item(01, 18,"Deathwatch eyes"));
+atlas.push_back(Item(19, 38,"Eyes of the eagle"));
+atlas.push_back(Item(39, 58,"Goggles of minute seeing"));
+atlas.push_back(Item(59, 72,"Pirate's eye patch"));
+atlas.push_back(Item(73, 87,"Spectacles of understanding"));
+atlas.push_back(Item(88, 100,"Lenses of detection"));
+
+atlas.push_back(Item(01, 20,"Eyes of the owl"));
+atlas.push_back(Item(21, 44,"Eyes of keen sight"));
+atlas.push_back(Item(45, 66,"Treasure hunter's goggles"));
+atlas.push_back(Item(67, 84,"Inquisitor's monocle"));
+atlas.push_back(Item(85, 100,"Kinsight goggles"));
+
+atlas.push_back(Item(01, 16,"Goggles of elvenkind"));
+atlas.push_back(Item(17, 31,"Goggles of brilliant light"));
+atlas.push_back(Item(32, 48,"Blind man's fold"));
+atlas.push_back(Item(49, 67,"Goggles of night"));
+atlas.push_back(Item(68, 82,"Lenses of figment piercing"));
+atlas.push_back(Item(83, 100,"Arachnid goggles"));
+
+atlas.push_back(Item(01, 21,"Darklands goggles"));
+atlas.push_back(Item(22, 40,"Sniper goggles"));
+atlas.push_back(Item(41, 58,"Rainbow lenses"));
+atlas.push_back(Item(59, 77,"Annihilation spectacles"));
+atlas.push_back(Item(78, 100,"Eyes of doom"));
+
+atlas.push_back(Item(01, 60,"Eyes of eyebite"));
+atlas.push_back(Item(61, 100,"Sniper goggles, greater"));
+
+atlas.push_back(Item(01, 18,"Eyes of charming"));
+atlas.push_back(Item(19, 34,"Monocle of the investigator"));
+atlas.push_back(Item(35, 48,"Sea tyrant's patch"));
+atlas.push_back(Item(49, 63,"Swordmaster's blindfold"));
+atlas.push_back(Item(64, 77,"Mindmaster's eyes"));
+atlas.push_back(Item(78, 90,"Eyes of the dragon"));
+atlas.push_back(Item(91, 100,"Truesight goggles"));

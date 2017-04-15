@@ -1,0 +1,49 @@
+atlas.push_back(Item(01, 10,"Sleeves of many garments"));
+atlas.push_back(Item(11, 20,"Armbands of the brawler"));
+atlas.push_back(Item(21, 48,"Bracers of armor +1"));
+atlas.push_back(Item(49, 63,"Burglar's bracers"));
+atlas.push_back(Item(64, 91,"Bracers of steadiness"));
+atlas.push_back(Item(92, 96,"Manacles of cooperation"));
+atlas.push_back(Item(97, 100,"Shackles of compliance"));
+
+atlas.push_back(Item(01, 27,"Bracers of armor +2"));
+atlas.push_back(Item(28,28,Bracers of falcon's aim));
+atlas.push_back(Item(29, 38,"Inquisitor's bastion vambraces"));
+atlas.push_back(Item(39, 65,"Bracers of archery, lesser"));
+atlas.push_back(Item(66, 68,"Spellguard bracers"));
+atlas.push_back(Item(69, 71,"Bonebreaker gauntlets"));
+atlas.push_back(Item(72, 81,"Vambraces of defense"));
+atlas.push_back(Item(82, 98,"Verdant vine"));
+atlas.push_back(Item(99,99,Longarm bracers));
+atlas.push_back(Item(100,100,Bracers of the glib entertainer));
+
+atlas.push_back(Item(01, 04,"Charm bracelet"));
+atlas.push_back(Item(05, 08,"Duelist's vambraces"));
+atlas.push_back(Item(09, 13,"Merciful vambraces"));
+atlas.push_back(Item(14, 18,"Vambraces of the tactician"));
+atlas.push_back(Item(19, 43,"Bracers of armor +3"));
+atlas.push_back(Item(44, 53,"Seducer's bane"));
+atlas.push_back(Item(54, 58,"Bracers of the avenging knight"));
+atlas.push_back(Item(59, 63,"Arrowmaster's bracers"));
+atlas.push_back(Item(64, 73,"Vambraces of the genie (efreeti)"));
+atlas.push_back(Item(74, 78,"Bracelet of bargaining"));
+atlas.push_back(Item(79, 82,"Bracelet of mercy"));
+atlas.push_back(Item(83, 86,"Bracers of the merciful knight"));
+atlas.push_back(Item(87, 90,"Bracelet of second chances"));
+atlas.push_back(Item(91, 99,"Bracers of armor +4"));
+atlas.push_back(Item(100,100,Shackles of durance vile));
+
+atlas.push_back(Item(01, 10,"Vambraces of the genie (djinni)"));
+atlas.push_back(Item(11, 20,"Vambraces of the genie (marid)"));
+atlas.push_back(Item(21, 30,"Vambraces of the genie (shaitan)"));
+atlas.push_back(Item(31, 50,"Bracelet of friends"));
+atlas.push_back(Item(51, 70,"Bracers of archery, greater"));
+atlas.push_back(Item(71, 90,"Bracers of armor +5"));
+atlas.push_back(Item(91, 100,"Bracers of sworn vengeance"));
+
+atlas.push_back(Item(01, 30,"Dimensional shackles"));
+atlas.push_back(Item(31, 45,"Gauntlets of skill at arms"));
+atlas.push_back(Item(46, 100,"Bracers of armor +6"));
+
+atlas.push_back(Item(01, 60,"Bracers of armor +7"));
+atlas.push_back(Item(61, 100,"Bracers of armor +8"));

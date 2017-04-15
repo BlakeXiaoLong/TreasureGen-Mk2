@@ -1,0 +1,51 @@
+atlas.push_back(Item(01, 60,"Phylactery of faithfulness"));
+atlas.push_back(Item(61, 100,"Dead man's headband"));
+
+atlas.push_back(Item(01, 09,"Headband of alluring charisma +2"));
+atlas.push_back(Item(10, 18,"Headband of inspired wisdom +2"));
+atlas.push_back(Item(19, 27,"Headband of vast intelligence +2"));
+atlas.push_back(Item(28, 33,"Headband of aerial agility +2"));
+atlas.push_back(Item(34, 39,"Shifter's headband +2"));
+atlas.push_back(Item(40, 45,"Headband of ponderous recollection"));
+atlas.push_back(Item(46, 51,"Headband of ki focus"));
+atlas.push_back(Item(52, 58,"Headband of unshakeable resolve"));
+atlas.push_back(Item(59, 66,"Hollywreath band"));
+atlas.push_back(Item(67, 74,"Headband of deathless devotion"));
+atlas.push_back(Item(75, 82,"Phylactery of the shepherd"));
+atlas.push_back(Item(83, 91,"Headband of intuition"));
+atlas.push_back(Item(92, 100,"Headband of fortune's favor"));
+
+atlas.push_back(Item(01, 06,"Headband of havoc"));
+atlas.push_back(Item(07, 12,"Serpent's band"));
+atlas.push_back(Item(13, 20,"Headband of mental prowess +2"));
+atlas.push_back(Item(21, 26,"Hunter's band"));
+atlas.push_back(Item(27, 34,"Phylactery of negative channeling"));
+atlas.push_back(Item(35, 42,"Phylactery of positive channeling"));
+atlas.push_back(Item(43, 48,"Veiled eye"));
+atlas.push_back(Item(49, 54,"Band of the stalwart warrior"));
+atlas.push_back(Item(55, 60,"Headband of ninjitsu"));
+atlas.push_back(Item(61, 68,"Headband of alluring charisma +4"));
+atlas.push_back(Item(69, 76,"Headband of inspired wisdom +4"));
+atlas.push_back(Item(77, 85,"Headband of mental superiority +2"));
+atlas.push_back(Item(86, 93,"Headband of vast intelligence +4"));
+atlas.push_back(Item(94, 100,"Shifter's headband +4"));
+
+atlas.push_back(Item(01, 30,"Headband of arcane energy"));
+atlas.push_back(Item(31, 70,"Headband of counterspelling"));
+atlas.push_back(Item(71, 100,"Headband of knucklebones"));
+
+atlas.push_back(Item(01, 09,"Soulbound eye"));
+atlas.push_back(Item(10, 19,"Winter wolf headband"));
+atlas.push_back(Item(20, 32,"Headband of alluring charisma +6"));
+atlas.push_back(Item(33, 45,"Headband of inspired wisdom +6"));
+atlas.push_back(Item(46, 58,"Headband of vast intelligence +6"));
+atlas.push_back(Item(59, 66,"Shifter's headband +6"));
+atlas.push_back(Item(67, 81,"Headband of mental prowess +4"));
+atlas.push_back(Item(82, 90,"Headband of seduction"));
+atlas.push_back(Item(91, 100,"Headband of aerial agility +4"));
+
+atlas.push_back(Item(01, 20,"Headband of mental resilience"));
+atlas.push_back(Item(21, 50,"Headband of mental superiority +4"));
+atlas.push_back(Item(51, 65,"Headband of aerial agility +6"));
+atlas.push_back(Item(66, 85,"Headband of metal prowess +6"));
+atlas.push_back(Item(86, 100,"Headband of mental superiority +6"));

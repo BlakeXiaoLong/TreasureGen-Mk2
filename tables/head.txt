@@ -1,0 +1,52 @@
+atlas.push_back(Item(01, 10,"Mask of stony demeanor"));
+atlas.push_back(Item(11, 22,"Cap of human guise"));
+atlas.push_back(Item(23, 36,"Cap of light"));
+atlas.push_back(Item(37, 56,"Hat of disguise"));
+atlas.push_back(Item(57, 71,"Buffering cap"));
+atlas.push_back(Item(72, 85,"Miser's mask"));
+atlas.push_back(Item(86, 100,"Stalker's mask"));
+
+atlas.push_back(Item(01, 12,"Circlet of persuasion"));
+atlas.push_back(Item(13, 21,"Grappler's mask"));
+atlas.push_back(Item(22, 31,"Helm of fearsome mien"));
+atlas.push_back(Item(32, 40,"Jingasa of the fortunate soldier"));
+atlas.push_back(Item(41, 54,"Helm of comprehend languages and read magic"));
+atlas.push_back(Item(55, 67,"Crown of swords"));
+atlas.push_back(Item(68, 87,"Crown of blasting, minor"));
+atlas.push_back(Item(88, 100,"Mask of the krenshar"));
+
+atlas.push_back(Item(01, 16,"Helm of the mammoth lord"));
+atlas.push_back(Item(17, 30,"Veil of fleeting glances"));
+atlas.push_back(Item(31, 46,"Mask of a thousand tomes"));
+atlas.push_back(Item(47, 63,"Medusa mask"));
+atlas.push_back(Item(64, 80,"Cap of the free thinker"));
+atlas.push_back(Item(81, 100,"Halo of inner calm"));
+
+atlas.push_back(Item(01, 06,"Cat's eye crown"));
+atlas.push_back(Item(07, 12,"Maw of the wyrm"));
+atlas.push_back(Item(13, 19,"Mitre of the hierophant"));
+atlas.push_back(Item(20, 27,"Magician's hat"));
+atlas.push_back(Item(28, 34,"Circlet of mindsight"));
+atlas.push_back(Item(35, 42,"Mask of the skull"));
+atlas.push_back(Item(43, 50,"Howling helm"));
+atlas.push_back(Item(51, 62,"Crown of blasting, major"));
+atlas.push_back(Item(63, 72,"Helm of underwater action"));
+atlas.push_back(Item(73, 79,"Crown of conquest"));
+atlas.push_back(Item(80, 85,"Batrachian helm"));
+atlas.push_back(Item(86, 94,"Helm of telepathy"));
+atlas.push_back(Item(95, 100,"Plague mask"));
+
+atlas.push_back(Item(01, 14,"Iron circlet of guarded souls"));
+atlas.push_back(Item(15, 29,"Laurel of command"));
+atlas.push_back(Item(30, 45,"Mask of giants, lesser"));
+atlas.push_back(Item(46, 61,"Steel, mind cap"));
+atlas.push_back(Item(62, 78,"Stormlord's helm"));
+atlas.push_back(Item(79, 100,"Helm of brilliance, lesser"));
+
+atlas.push_back(Item(01, 14,"Judge's wig"));
+atlas.push_back(Item(15, 39,"Helm of teleportation"));
+atlas.push_back(Item(40, 55,"Halo of menace"));
+atlas.push_back(Item(56, 68,"Mask of giants, greater"));
+atlas.push_back(Item(69, 83,"Helm of brilliance"));
+atlas.push_back(Item(84, 92,"Helm of electric radiance"));
+atlas.push_back(Item(93, 100,"Crown of heaven"));
