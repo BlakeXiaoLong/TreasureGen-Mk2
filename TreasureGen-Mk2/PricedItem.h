@@ -1,7 +1,7 @@
 #pragma once
 #include "Item.h"
 
-class PricedItem : Item
+class PricedItem : public Item
 {
 public:
 	int cost;
@@ -9,5 +9,9 @@ public:
 	PricedItem(int start, int end, string name, int cost) : Item(start, end, name)
 	{
 		this->cost = cost;
+	}
+	PricedItem() :Item()
+	{
+		cost = -1;
 	}
 };

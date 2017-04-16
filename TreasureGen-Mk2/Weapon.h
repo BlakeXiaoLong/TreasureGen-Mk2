@@ -1,7 +1,7 @@
 #pragma once
 #include "Item.h"
 
-class Weapon : Item
+class Weapon : public Item
 {
 public:
 	enum Type { melee, ranged };
