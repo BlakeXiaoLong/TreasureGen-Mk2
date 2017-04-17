@@ -1,0 +1,30 @@
+atlas.push_back(Item(01,04,"Bouncing Spell"));
+atlas.push_back(Item(05,09,"Disruptive Spell"));
+atlas.push_back(Item(10,14,"Ectoplasmic Spell"));
+atlas.push_back(Item(15,19,"Elemental Spell"));
+atlas.push_back(Item(20,31,"Enlarge Spell"));
+atlas.push_back(Item(32,43,"Extend Spell"));
+atlas.push_back(Item(44,48,"Flaring Spell"));
+atlas.push_back(Item(49,53,"Focused Spell"));
+atlas.push_back(Item(54,58,"Intensified Spell"));
+atlas.push_back(Item(59,63,"Lingering Spell"));
+atlas.push_back(Item(64,68,"Piercing Spell"));
+atlas.push_back(Item(69,73,"Reach Spell"));
+atlas.push_back(Item(74,78,"Rime Spell"));
+atlas.push_back(Item(79,83,"Selective Spell"));
+atlas.push_back(Item(84,95,"Silent Spell"));
+atlas.push_back(Item(96,100,"Toppling Spell"));
+
+atlas.push_back(Item(01,11,"Burning Spell"));
+atlas.push_back(Item(12,22,"Concussive Spell"));
+atlas.push_back(Item(23,40,"Empower Spell"));
+atlas.push_back(Item(41,51,"Persistent Spell"));
+atlas.push_back(Item(52,62,"Sickening Spell"));
+atlas.push_back(Item(63,75,"Thanatopic Spell"));
+atlas.push_back(Item(76,88,"Threnodic Spell"));
+atlas.push_back(Item(89,100,"Thundering Spell"));
+
+atlas.push_back(Item(01,20,"Dazing Spell"));
+atlas.push_back(Item(21,40,"Echoing Spell"));
+atlas.push_back(Item(41,70,"Maximize Spell"));
+atlas.push_back(Item(71,100,"Widen Spell"));

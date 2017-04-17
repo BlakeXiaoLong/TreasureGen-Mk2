@@ -25,7 +25,7 @@ string artGen(Grade grade, int num = 1);
 string scrollGen(Grade grade, int num = 1);
 string wandGen(Grade grade, int num = 1);
 string potionGen(Grade grade, int num = 1);
-string armorGen(Grade grade, int num = 1); // grade = 0 for masterwork
+string armorGen(Grade grade, int num = 1);  // grade = 0 for masterwork
 string weaponGen(Grade grade, int num = 1); // ^
 string ringGen(Grade grade, int num = 1);
 string wondrousGen(Grade grade, int num = 1);

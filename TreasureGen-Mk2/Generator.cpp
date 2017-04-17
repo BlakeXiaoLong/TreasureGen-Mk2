@@ -3,15 +3,15 @@ using namespace std;
 
 vector<Armor> armor;
 vector<Weapon> weapons;
-vector<vector<Item>> gems, staffs, rods, rings, wondrous;
+vector<vector<Item>> gems, staffs, rods, rings, wondrous, effects;
 vector<vector<PricedItem>> art;
 vector<vector<LevelledItem>> wands, scrolls, potions;
 
 int main()
 {
 	srand((unsigned int)time(NULL));
-	buildEverything(armor, weapons, art, gems, wands, scrolls, potions, staffs, rods, rings, wondrous);
-
+	buildEverything(armor, weapons, art, gems, wands, scrolls, potions, staffs, rods, rings, wondrous, effects);
+	cout << wondrousGen(GMa, 4);
 	return 0;
 }
 
@@ -117,27 +117,11 @@ string scrollGen(Grade grade, int num)
 			else if (rollA < 100) level = 9;
 			break;
 		}
-		if (rollB <= 45)
-		{
-			common = true;
-			arcane = true;
-		}
-		else if (rollB <= 60)
-		{
-			common = false;
-			arcane = true;
-		}
-		else if (rollB <= 90)
-		{
-			common = true;
-			arcane = false;
-		}
-		else if (rollB <= 100)
-		{
-			common = false;
-			arcane = false;
-		}
-		
+		if (rollB <= 45) { common = true; arcane = true; }
+		else if (rollB <= 60) { common = false; arcane = true; }
+		else if (rollB <= 90) { common = true; arcane = false; }
+		else if (rollB <= 100) { common = false; arcane = false; }
+
 		level = (level * 2) + (common ? 0 : 1) + (arcane ? 0 : 20);
 		LevelledItem o = select(scrolls, level + 1);
 		ss << o.name << " (level " << o.level << ")\n";
@@ -147,40 +131,162 @@ string scrollGen(Grade grade, int num)
 string wandGen(Grade grade, int num)
 {
 	stringstream ss;
+	for (int i = 0; i < num; i++)
+	{
+		int rollA = roll(1, 100), rollB = roll(1, 100), level = 0;
+		bool common = false;
+
+		switch (grade)
+		{
+		case LMi:
+			if (rollA <= 40) level = 0;
+			else if (rollA <= 100) level = 1;
+			break;
+		case GMi:
+			if (rollA <= 80) level = 1;
+			else if (rollA <= 100) level = 2;
+			break;
+		case LMe:
+			if (rollA <= 75) level = 2;
+			else if (rollA <= 100) level = 3;
+			break;
+		case GMe:
+			if (rollA <= 20) level = 2;
+			else if (rollA <= 80) level = 3;
+			else if (rollA <= 100) level = 4;
+			break;
+		case LMa:
+			if (rollA <= 60) level = 3;
+			else if (rollA <= 100) level = 4;
+			break;
+		case GMa:
+			if (rollA <= 30) level = 3;
+			else if (rollA <= 100) level = 4;
+			break;
+		}
+		if (rollB <= 70) common = true;
+		else if (rollB <= 100) common = false;
+
+		level = (level * 2) + (common ? 0 : 1);
+		LevelledItem o = select(wands, level + 1);
+		ss << o.name << " (level " << o.level << ")\n";
+	}
 	return ss.str();
 }
 string potionGen(Grade grade, int num)
 {
 	stringstream ss;
+	for (int i = 0; i < num; i++)
+	{
+		int rollA = roll(1, 100), rollB = roll(1, 100), level = 0;
+		bool common = false;
+
+		switch (grade)
+		{
+		case LMi:
+			if (rollA <= 40) level = 0;
+			else if (rollA <= 100) level = 1;
+			break;
+		case GMi:
+			if (rollA <= 10) level = 0;
+			else if (rollA <= 60) level = 1;
+			else if (rollA <= 100) level = 2;
+			break;
+		case LMe:
+			if (rollA <= 25) level = 1;
+			else if (rollA <= 85) level = 2;
+			else if (rollA <= 100) level = 3;
+			break;
+		case GMe:
+			if (rollA <= 10) level = 1;
+			else if (rollA <= 50) level = 2;
+			else if (rollA <= 100) level = 3;
+			break;
+		case LMa:
+			if (rollA <= 35) level = 2;
+			else if (rollA <= 100) level = 3;
+			break;
+		case GMa:
+			if (rollA <= 10) level = 2;
+			else if (rollA <= 100) level = 3;
+			break;
+		}
+		if (rollB <= 75)common = true;
+		else if (rollB <= 100 && level != 0) common = false;
+
+		level = (level * 2) + (common ? 0 : 1);
+		LevelledItem o = select(potions, level + 1);
+		ss << o.name << " (level " << o.level << ")\n";
+
+	}
 	return ss.str();
 }
 string armorGen(Grade grade, int num)
 {
 	stringstream ss;
+
 	return ss.str();
 }
 string weaponGen(Grade grade, int num)
 {
 	stringstream ss;
+
 	return ss.str();
 }
 string ringGen(Grade grade, int num)
 {
 	stringstream ss;
+	for (int i = 0; i < num; i++)
+	{
+		Item o = select(rings, grade);
+		ss << o.name + "\n";
+	}
 	return ss.str();
 }
 string wondrousGen(Grade grade, int num)
 {
 	stringstream ss;
+	for (int i = 0; i < num; i++)
+	{
+		int type, rollA = roll(1, 100);
+		if (rollA <= 6) type = 0;
+		else if (rollA <= 12) type = 1;
+		else if (rollA <= 17) type = 2;
+		else if (rollA <= 22) type = 3;
+		else if (rollA <= 28) type = 4;
+		else if (rollA <= 34) type = 5;
+		else if (rollA <= 41) type = 6;
+		else if (rollA <= 47) type = 7;
+		else if (rollA <= 54) type = 8;
+		else if (rollA <= 61) type = 9;
+		else if (rollA <= 67) type = 10;
+		else if (rollA <= 100) type = 11;
+
+		Item o = select(wondrous, 6 * type + grade);
+		ss << o.name << "\n";
+	}
 	return ss.str();
 }
 string staffGen(Grade grade, int num)
 {
 	stringstream ss;
+	for (int i = 0; i < num; i++)
+	{
+		Item o = select(staffs, grade);
+		ss << o.name << "\n";
+	}
 	return ss.str();
 }
 string rodGen(Grade grade, int num)
 {
 	stringstream ss;
+	for (int i = 0; i < num; i++)
+	{
+		int rollA = roll(1, 100);
+		Item o = select(rods, grade);
+		if (o.name.at(0) == '+')
+			o.name.replace(0, 2, select(effects, o.name.at(1) - 48).name);
+		ss << o.name << "\n";
+	}
 	return ss.str();
 }

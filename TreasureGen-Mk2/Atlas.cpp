@@ -2,7 +2,7 @@
 using namespace std;
 
 void buildEverything(vector<Armor> &armor, vector<Weapon> &weapons, vector<vector<PricedItem>> &art, vector<vector<Item>> &gems, vector<vector<LevelledItem>> &wands,
-	vector<vector<LevelledItem>> &scrolls, vector<vector<LevelledItem>> &potions, vector<vector<Item>> &staffs, vector<vector<Item>> &metamagic, vector<vector<Item>> &rings, vector<vector<Item>> &wondrous)
+	vector<vector<LevelledItem>> &scrolls, vector<vector<LevelledItem>> &potions, vector<vector<Item>> &staffs, vector<vector<Item>> &metamagic, vector<vector<Item>> &rings, vector<vector<Item>> &wondrous, vector<vector<Item>> &effects)
 {
 	buildArmor(armor);
 	buildWeapon(weapons);
@@ -15,6 +15,7 @@ void buildEverything(vector<Armor> &armor, vector<Weapon> &weapons, vector<vecto
 	buildMetamagic(metamagic);
 	buildRing(rings);
 	buildWondrous(wondrous);
+	buildEffect(effects);
 }
 void buildArmor(vector<Armor> &atlas)
 {
@@ -759,7 +760,7 @@ void buildScroll(vector<vector<LevelledItem>> &atlases)
 {
 	vector<LevelledItem> atlas;
 	/*
-				  |00|01|02|03|04|05|06|07|08|09|
+		  Levels->|00|01|02|03|04|05|06|07|08|09|
 		Arcane
 		-   Common 00 02 04 06 08 10 12 14 16 18
 		- Uncommon 01 03 05 07 09 11 13 15 17 19
@@ -1848,8 +1849,8 @@ void buildPotion(vector<vector<LevelledItem>> &atlases)
 	vector<LevelledItem> atlas;
 	/*
 	   Level->  0|1|2|3
-		 Common 0 1 3 4
-	   Uncommon - 2 5 6
+		 Common 0 2 4 6
+	   Uncommon 1 3 5 7
 	*/
 
 	atlas.push_back(LevelledItem(1, 14, "Arcane mark", 0));
@@ -1859,6 +1860,9 @@ void buildPotion(vector<vector<LevelledItem>> &atlases)
 	atlas.push_back(LevelledItem(59, 72, "Resistance", 0));
 	atlas.push_back(LevelledItem(73, 86, "Stabilize", 0));
 	atlas.push_back(LevelledItem(87, 100, "Virtue", 0));
+	atlases.push_back(atlas);
+
+	atlas.clear(); // there are no level 0 uncommon items
 	atlases.push_back(atlas);
 
 	atlas.clear();
@@ -2145,6 +2149,46 @@ void buildMetamagic(vector<vector<Item>> &atlases)
 	atlas.push_back(Item(71, 75, "Rod of alertness"));
 	atlas.push_back(Item(76, 95, "+3 Metamagic, greater"));
 	atlas.push_back(Item(96, 100, "Metamagic, quicken, greater"));
+	atlases.push_back(atlas);
+}
+void buildEffect(vector<vector<Item>> &atlases)
+{
+	vector<Item> atlas;
+
+	atlas.push_back(Item(1, 4, "Bouncing Spell"));
+	atlas.push_back(Item(5, 9, "Disruptive Spell"));
+	atlas.push_back(Item(10, 14, "Ectoplasmic Spell"));
+	atlas.push_back(Item(15, 19, "Elemental Spell"));
+	atlas.push_back(Item(20, 31, "Enlarge Spell"));
+	atlas.push_back(Item(32, 43, "Extend Spell"));
+	atlas.push_back(Item(44, 48, "Flaring Spell"));
+	atlas.push_back(Item(49, 53, "Focused Spell"));
+	atlas.push_back(Item(54, 58, "Intensified Spell"));
+	atlas.push_back(Item(59, 63, "Lingering Spell"));
+	atlas.push_back(Item(64, 68, "Piercing Spell"));
+	atlas.push_back(Item(69, 73, "Reach Spell"));
+	atlas.push_back(Item(74, 78, "Rime Spell"));
+	atlas.push_back(Item(79, 83, "Selective Spell"));
+	atlas.push_back(Item(84, 95, "Silent Spell"));
+	atlas.push_back(Item(96, 100, "Toppling Spell"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 11, "Burning Spell"));
+	atlas.push_back(Item(12, 22, "Concussive Spell"));
+	atlas.push_back(Item(23, 40, "Empower Spell"));
+	atlas.push_back(Item(41, 51, "Persistent Spell"));
+	atlas.push_back(Item(52, 62, "Sickening Spell"));
+	atlas.push_back(Item(63, 75, "Thanatopic Spell"));
+	atlas.push_back(Item(76, 88, "Threnodic Spell"));
+	atlas.push_back(Item(89, 100, "Thundering Spell"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Dazing Spell"));
+	atlas.push_back(Item(21, 40, "Echoing Spell"));
+	atlas.push_back(Item(41, 70, "Maximize Spell"));
+	atlas.push_back(Item(71, 100, "Widen Spell"));
 	atlases.push_back(atlas);
 }
 void buildRing(vector<vector<Item>> &atlases)
