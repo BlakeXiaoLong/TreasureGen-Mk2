@@ -1,8 +1,8 @@
 #include "Atlas.h"
 using namespace std;
 
-void buildEverything(vector<Armor> &armor, vector<Weapon> &weapons, vector<vector<PricedItem>> &art, vector<vector<Item>> &gems, vector<vector<LevelledItem>> &wands,
-	vector<vector<LevelledItem>> &scrolls, vector<vector<LevelledItem>> &potions, vector<vector<Item>> &staffs, vector<vector<Item>> &metamagic, vector<vector<Item>> &rings, vector<vector<Item>> &wondrous, vector<vector<Item>> &effects)
+void buildEverything(vector<Armor> &armor, vector<Weapon> &weapons, vector<vector<PricedItem>> &art, vector<vector<Item>> &gems, vector<vector<LevelledItem>> &wands, vector<vector<LevelledItem>> &scrolls, vector<vector<LevelledItem>> &potions,
+	vector<vector<Item>> &staffs, vector<vector<Item>> &metamagic, vector<vector<Item>> &rings, vector<vector<Item>> &wondrous, vector<vector<Item>> &effects, vector<vector<Item>> &enchantments, vector<vector<Item>> &specifics)
 {
 	buildArmor(armor);
 	buildWeapon(weapons);
@@ -16,6 +16,8 @@ void buildEverything(vector<Armor> &armor, vector<Weapon> &weapons, vector<vecto
 	buildRing(rings);
 	buildWondrous(wondrous);
 	buildEffect(effects);
+	buildEnchantments(enchantments);
+	buildSpecifics(specifics);
 }
 void buildArmor(vector<Armor> &atlas)
 {
@@ -3050,4 +3052,139 @@ void buildWondrous(vector<vector<Item>> &atlases)
 	atlas.push_back(Item(1, 60, "Bracers of armor +7"));
 	atlas.push_back(Item(61, 100, "Bracers of armor +8"));
 	atlases.push_back(atlas);
+}
+void buildEnchantments(vector<vector<Item>> &atlases)
+{
+	vector<Item> atlas;
+	/*
+			 |+1|+2|+3|+4|+5|
+		Armor|00 01 02 03 04|
+	   Shield|05 06 07 08 09|
+		Melee|10 11 12 13 14| // need these
+	   Ranged|15 16 17 18 19| // need these
+	*/
+	atlas.push_back(Item(1, 6, "Benevolent"));
+	atlas.push_back(Item(7, 12, "Poison-resistant"));
+	atlas.push_back(Item(13, 18, "Balanced"));
+	atlas.push_back(Item(19, 24, "Bitter"));
+	atlas.push_back(Item(25, 30, "Bolstering"));
+	atlas.push_back(Item(31, 36, "Brawling"));
+	atlas.push_back(Item(37, 42, "Champion"));
+	atlas.push_back(Item(43, 48, "Dastard"));
+	atlas.push_back(Item(49, 54, "Deathless"));
+	atlas.push_back(Item(55, 60, "Defiant"));
+	atlas.push_back(Item(61, 66, "Fortification (light)"));
+	atlas.push_back(Item(67, 71, "Grinding"));
+	atlas.push_back(Item(72, 76, "Impervious"));
+	atlas.push_back(Item(77, 82, "Mirrored"));
+	atlas.push_back(Item(83, 88, "Spell storing"));
+	atlas.push_back(Item(89, 94, "Stanching"));
+	atlas.push_back(Item(95, 100, "Warding"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 12, "Glamered"));
+	atlas.push_back(Item(13, 24, "Jousting"));
+	atlas.push_back(Item(25, 38, "Shadow"));
+	atlas.push_back(Item(39, 52, "Slick"));
+	atlas.push_back(Item(53, 64, "Expeditious"));
+	atlas.push_back(Item(65, 76, "Creeping"));
+	atlas.push_back(Item(77, 88, "Rallying"));
+	atlas.push_back(Item(89, 100, "Spell resistance (13)"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 8, "Adhesive"));
+	atlas.push_back(Item(9, 17, "Hosteling"));
+	atlas.push_back(Item(18, 26, "Radiant"));
+	atlas.push_back(Item(27, 36, "Delving"));
+	atlas.push_back(Item(37, 45, "Putrid"));
+	atlas.push_back(Item(46, 55, "Fortification (moderate)"));
+	atlas.push_back(Item(56, 65, "Ghost touch"));
+	atlas.push_back(Item(66, 74, "Invulnerability"));
+	atlas.push_back(Item(75, 84, "Spell resistance (15)"));
+	atlas.push_back(Item(85, 92, "Titanic"));
+	atlas.push_back(Item(93, 100, "Wild"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 16, "Harmonizing"));
+	atlas.push_back(Item(17, 33, "Shadow, improved"));
+	atlas.push_back(Item(34, 50, "Slick, improved"));
+	atlas.push_back(Item(51, 67, "Energy resistance"));
+	atlas.push_back(Item(68, 83, "Martyring"));
+	atlas.push_back(Item(84, 100, "Spell resistance (17)"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 8, "Righteous"));
+	atlas.push_back(Item(9, 15, "Unbound"));
+	atlas.push_back(Item(16, 23, "Unrighteous"));
+	atlas.push_back(Item(24, 30, "Vigilant"));
+	atlas.push_back(Item(31, 37, "Determination"));
+	atlas.push_back(Item(38, 45, "Shadow, greater"));
+	atlas.push_back(Item(46, 53, "Slick, greater"));
+	atlas.push_back(Item(54, 61, "Energy resistance, improved"));
+	atlas.push_back(Item(62, 69, "Etherealness"));
+	atlas.push_back(Item(70, 76, "Undead controlling"));
+	atlas.push_back(Item(77, 84, "Energy resistance, greater"));
+	atlas.push_back(Item(85, 92, "Fortification (heavy)"));
+	atlas.push_back(Item(93, 100, "Spell resistance (19)"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 10, "Poison-resistant"));
+	atlas.push_back(Item(11, 19, "Arrow catching"));
+	atlas.push_back(Item(20, 28, "Bashing"));
+	atlas.push_back(Item(29, 37, "Blinding"));
+	atlas.push_back(Item(38, 46, "Clangorous"));
+	atlas.push_back(Item(47, 55, "Defiant"));
+	atlas.push_back(Item(56, 64, "Fortification (light)"));
+	atlas.push_back(Item(65, 73, "Grinding"));
+	atlas.push_back(Item(74, 82, "Impervious"));
+	atlas.push_back(Item(83, 91, "Mirrored"));
+	atlas.push_back(Item(92, 100, "Ramming"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 15, "Rallying"));
+	atlas.push_back(Item(16, 30, "Wyrmsbreath"));
+	atlas.push_back(Item(31, 50, "Animated"));
+	atlas.push_back(Item(51, 67, "Arrow deflection"));
+	atlas.push_back(Item(68, 82, "Merging"));
+	atlas.push_back(Item(83, 100, "Spell resistance (13)"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 15, "Hosteling"));
+	atlas.push_back(Item(16, 32, "Radiant"));
+	atlas.push_back(Item(33, 49, "Fortification (moderate)"));
+	atlas.push_back(Item(50, 66, "Ghost touch"));
+	atlas.push_back(Item(67, 83, "Spell resistance (15)"));
+	atlas.push_back(Item(84, 98, "Wild"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 50, "Energy resistance"));
+	atlas.push_back(Item(51, 100, "Spell resistance (17)"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 11, "Determination"));
+	atlas.push_back(Item(12, 27, "Energy resistance, improved"));
+	atlas.push_back(Item(28, 38, "Undead controlling"));
+	atlas.push_back(Item(39, 55, "Energy resistance, greater"));
+	atlas.push_back(Item(56, 70, "Fortification (heavy)"));
+	atlas.push_back(Item(71, 85, "Reflecting"));
+	atlas.push_back(Item(86, 100, "Spell resistance (19)"));
+	atlases.push_back(atlas);
+}
+void buildSpecifics(vector<vector<Item>> &atlases)
+{
+	vector<Item>;
+	/*
+	          |Li|Gi|Le|Ge|La|Ga|
+	     Armor|00 01 02 03 04 05|
+	   Weapons|06 07 08 09 10 11|
+	*/
 }
