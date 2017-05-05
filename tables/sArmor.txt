@@ -1,0 +1,78 @@
+atlas.push_back(Item(01,100,"Mithral shirt"));
+
+atlas.push_back(Item(01,33,"Mistmail"));
+atlas.push_back(Item(34,66,"Otyugh hide"));
+atlas.push_back(Item(67,100,"Dragonhide plate"));
+
+atlas.push_back(Item(01,33,"Elven chain"));
+atlas.push_back(Item(34,66,"Rhino hide"));
+atlas.push_back(Item(67,100,"Morlock hide"));
+
+atlas.push_back(Item(01,15,"Adamantine breastplate"));
+atlas.push_back(Item(16,25,"Soothsayer's raiment"));
+atlas.push_back(Item(26,38,"Equestrian plate"));
+atlas.push_back(Item(39,50,"Enchanted eelskin"));
+atlas.push_back(Item(51,62,"Boneless leather"));
+atlas.push_back(Item(63,72,"Murderer's blackcloth"));
+atlas.push_back(Item(73,86,"Folding plate"));
+atlas.push_back(Item(87,100,"Breastplate of vanishing"));
+
+atlas.push_back(Item(01,13,"Armor of insults"));
+atlas.push_back(Item(14,29,"Dwarven plate"));
+atlas.push_back(Item(30,45,"Banded mail of luck"));
+atlas.push_back(Item(46,58,"Catskin leather"));
+atlas.push_back(Item(59,71,"Celestial armor"));
+atlas.push_back(Item(72,84,"Buccaneer's breastplate"));
+atlas.push_back(Item(85,100,"Plate armor of the deep"));
+
+atlas.push_back(Item(01,10,"Breastplate of command"));
+atlas.push_back(Item(11,14,"Forsaken banded mail"));
+atlas.push_back(Item(15,24,"Mithral full plate of speed"));
+atlas.push_back(Item(25,28,"Warden of the woods"));
+atlas.push_back(Item(29,32,"Scarab breastplate"));
+atlas.push_back(Item(33,38,"Giant-hide armor (ogre)"));
+atlas.push_back(Item(39,42,"Hamatula hide"));
+atlas.push_back(Item(43,48,"Giant-hide armor (hill giant)"));
+atlas.push_back(Item(49,52,"Demon armor"));
+atlas.push_back(Item(53,58,"Giant-hide armor (stone, fire, or frost giant)"));
+atlas.push_back(Item(59,64,"Giant-hide armor (troll)"));
+atlas.push_back(Item(65,70,"Mail of malevolence"));
+atlas.push_back(Item(71,76,"Giant-hide armor (cloud giant)"));
+atlas.push_back(Item(77,82,"Giant-hide armor (storm giant)"));
+atlas.push_back(Item(83,88,"Daystar half-plate"));
+atlas.push_back(Item(89,96,"Invincible armor"));
+atlas.push_back(Item(97,100,"Prismatic plate"));
+
+
+atlas.push_back(Item(01,20,"Living steel heavy shield"));
+atlas.push_back(Item(21,45,"Darkwood buckler"));
+atlas.push_back(Item(46,70,"Darkwood shield"));
+atlas.push_back(Item(71,100,"Mithral heavy shield"));
+
+atlas.push_back(Item(01,30,"Zombie skin shield"));
+atlas.push_back(Item(31,75,"Caster's shield"));
+atlas.push_back(Item(76,100,"Burglar's buckler"));
+
+atlas.push_back(Item(01,35,"Spined shield"));
+atlas.push_back(Item(36,50,"Dragonslayer's shield"));
+atlas.push_back(Item(51,65,"Collapsible tower"));
+atlas.push_back(Item(66,100,"Lion's shield"));
+
+atlas.push_back(Item(01,20,"Caster shield, greater"));
+atlas.push_back(Item(21,40,"Celestial shield"));
+atlas.push_back(Item(41,60,"Maelstrom shield"));
+atlas.push_back(Item(61,80,"Volcanic shield"));
+atlas.push_back(Item(81,100,"Tempest shield"));
+
+atlas.push_back(Item(01,20,"Battlement shield"));
+atlas.push_back(Item(21,40,"Winged shield"));
+atlas.push_back(Item(41,60,"Avalanche shield"));
+atlas.push_back(Item(61,80,"Fortress shield"));
+atlas.push_back(Item(81,100,"Wyrmslayer's shield"));
+
+atlas.push_back(Item(01,20,"Spell ward tower shield"));
+atlas.push_back(Item(21,35,"Quick block buckler"));
+atlas.push_back(Item(36,50,"Belligerent shield"));
+atlas.push_back(Item(51,65,"Force tower"));
+atlas.push_back(Item(66,85,"Absorbing shield"));
+atlas.push_back(Item(86,100,"Elysian shield"));

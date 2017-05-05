@@ -3060,8 +3060,8 @@ void buildEnchantments(vector<vector<Item>> &atlases)
 			 |+1|+2|+3|+4|+5|
 		Armor|00 01 02 03 04|
 	   Shield|05 06 07 08 09|
-		Melee|10 11 12 13 14| // need these
-	   Ranged|15 16 17 18 19| // need these
+		Melee|10 11 12 13 --| // need these
+	   Ranged|15 16 17 -- --| // need these
 	*/
 	atlas.push_back(Item(1, 6, "Benevolent"));
 	atlas.push_back(Item(7, 12, "Poison-resistant"));
@@ -3178,13 +3178,379 @@ void buildEnchantments(vector<vector<Item>> &atlases)
 	atlas.push_back(Item(71, 85, "Reflecting"));
 	atlas.push_back(Item(86, 100, "Spell resistance (19)"));
 	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 1, "Impervious"));
+	atlas.push_back(Item(2, 2, "Glamered"));
+	atlas.push_back(Item(3, 3, "Allying"));
+	atlas.push_back(Item(4, 8, "Bane"));
+	atlas.push_back(Item(9, 9, "Benevolent"));
+	atlas.push_back(Item(10, 10, "Called"));
+	atlas.push_back(Item(11, 12, "Conductive"));
+	atlas.push_back(Item(13, 16, "Corrosive"));
+	atlas.push_back(Item(17, 17, "Countering"));
+	atlas.push_back(Item(18, 18, "Courageous"));
+	atlas.push_back(Item(19, 19, "Cruel"));
+	atlas.push_back(Item(20, 21, "Cunning"));
+	atlas.push_back(Item(22, 22, "Deadly"));
+	atlas.push_back(Item(23, 26, "Defending"));
+	atlas.push_back(Item(27, 27, "Dispelling"));
+	atlas.push_back(Item(28, 33, "Flaming"));
+	atlas.push_back(Item(34, 39, "Frost"));
+	atlas.push_back(Item(40, 41, "Furious"));
+	atlas.push_back(Item(42, 45, "Ghost touch"));
+	atlas.push_back(Item(46, 47, "Grayflame"));
+	atlas.push_back(Item(48, 48, "Grounding"));
+	atlas.push_back(Item(49, 49, "Guardian"));
+	atlas.push_back(Item(50, 50, "Heartseeker"));
+	atlas.push_back(Item(51, 52, "Huntsman"));
+	atlas.push_back(Item(53, 54, "Jurist"));
+	atlas.push_back(Item(55, 59, "Keen"));
+	atlas.push_back(Item(60, 61, "Ki focus"));
+	atlas.push_back(Item(62, 62, "Limning"));
+	atlas.push_back(Item(63, 64, "Menacing"));
+	atlas.push_back(Item(65, 65, "Merciful"));
+	atlas.push_back(Item(66, 68, "Mighty cleaving"));
+	atlas.push_back(Item(69, 69, "Mimetic"));
+	atlas.push_back(Item(70, 70, "Neutralizing"));
+	atlas.push_back(Item(71, 71, "Ominous"));
+	atlas.push_back(Item(72, 72, "Planar"));
+	atlas.push_back(Item(73, 73, "Quenching"));
+	atlas.push_back(Item(74, 74, "Seaborne"));
+	atlas.push_back(Item(75, 80, "Shock"));
+	atlas.push_back(Item(81, 85, "Spell storing"));
+	atlas.push_back(Item(86, 86, "Thawing"));
+	atlas.push_back(Item(87, 91, "Throwing"));
+	atlas.push_back(Item(92, 96, "Thundering"));
+	atlas.push_back(Item(97, 97, "Valiant"));
+	atlas.push_back(Item(98, 100, "Vicious"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 1, "Advancing"));
+	atlas.push_back(Item(2, 10, "Anarchic"));
+	atlas.push_back(Item(11, 19, "Anchoring"));
+	atlas.push_back(Item(20, 20, "Axiomatic"));
+	atlas.push_back(Item(21, 27, "Corrosive burst"));
+	atlas.push_back(Item(28, 28, "Defiant"));
+	atlas.push_back(Item(29, 29, "Dispelling burst"));
+	atlas.push_back(Item(30, 38, "Disruption"));
+	atlas.push_back(Item(39, 47, "Flaming burst"));
+	atlas.push_back(Item(48, 48, "Furyborn"));
+	atlas.push_back(Item(49, 49, "Glorious"));
+	atlas.push_back(Item(50, 58, "Holy"));
+	atlas.push_back(Item(59, 67, "Icy burst"));
+	atlas.push_back(Item(68, 68, "Igniting"));
+	atlas.push_back(Item(69, 69, "Impact"));
+	atlas.push_back(Item(70, 70, "Invigorating"));
+	atlas.push_back(Item(71, 71, "Ki intensifying"));
+	atlas.push_back(Item(72, 72, "Lifesurge"));
+	atlas.push_back(Item(73, 73, "Negating"));
+	atlas.push_back(Item(74, 74, "Phase locking"));
+	atlas.push_back(Item(75, 83, "Shocking burst"));
+	atlas.push_back(Item(84, 84, "Stalking"));
+	atlas.push_back(Item(85, 91, "Unholy"));
+	atlas.push_back(Item(92, 100, "Wounding"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Nullifying"));
+	atlas.push_back(Item(21, 40, "Repositioning"));
+	atlas.push_back(Item(41, 80, "Speed"));
+	atlas.push_back(Item(81, 100, "Spellstealing"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 40, "Brilliant energy"));
+	atlas.push_back(Item(41, 80, "Dancing"));
+	atlas.push_back(Item(81, 90, "Vorpal"));
+	atlas.push_back(Item(91, 95, "Transformative"));
+	atlas.push_back(Item(96, 100, "Dueling"));
+	atlases.push_back(atlas);
+
+	// empty atlas for lv5
+	atlas.clear();
+	atlases.push_back(atlas);
+
+	atlas.push_back(Item(1, 1, "Adaptive"));
+	atlas.push_back(Item(2, 2, "Impervious"));
+	atlas.push_back(Item(3, 3, "Glamered"));
+	atlas.push_back(Item(4, 6, "Allying"));
+	atlas.push_back(Item(7, 15, "Bane"));
+	atlas.push_back(Item(16, 16, "Called"));
+	atlas.push_back(Item(17, 19, "Conductive"));
+	atlas.push_back(Item(20, 20, "Conserving"));
+	atlas.push_back(Item(21, 24, "Corrosive"));
+	atlas.push_back(Item(25, 25, "Cruel"));
+	atlas.push_back(Item(26, 28, "Cunning"));
+	atlas.push_back(Item(29, 36, "Distance"));
+	atlas.push_back(Item(37, 45, "Flaming"));
+	atlas.push_back(Item(46, 54, "Frost"));
+	atlas.push_back(Item(55, 58, "Huntsman"));
+	atlas.push_back(Item(59, 62, "Jurist"));
+	atlas.push_back(Item(63, 63, "Limning"));
+	atlas.push_back(Item(64, 64, "Lucky"));
+	atlas.push_back(Item(65, 66, "Merciful"));
+	atlas.push_back(Item(67, 67, "Planar"));
+	atlas.push_back(Item(68, 68, "Reliable"));
+	atlas.push_back(Item(69, 76, "Returning"));
+	atlas.push_back(Item(77, 84, "Seeking"));
+	atlas.push_back(Item(85, 92, "Shock"));
+	atlas.push_back(Item(93, 100, "Thundering"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 10, "Anarchic"));
+	atlas.push_back(Item(11, 13, "Anchoring"));
+	atlas.push_back(Item(14, 23, "Axiomatic"));
+	atlas.push_back(Item(24, 31, "Corrosive burst"));
+	atlas.push_back(Item(32, 34, "Designating, lesser"));
+	atlas.push_back(Item(35, 37, "Endless ammunition"));
+	atlas.push_back(Item(38, 48, "Flaming burst"));
+	atlas.push_back(Item(49, 58, "Holy"));
+	atlas.push_back(Item(59, 69, "Icy burst"));
+	atlas.push_back(Item(70, 73, "Igniting"));
+	atlas.push_back(Item(74, 76, "Phase locking"));
+	atlas.push_back(Item(77, 86, "Shocking burst"));
+	atlas.push_back(Item(87, 90, "Stalking"));
+	atlas.push_back(Item(91, 100, "Unholy"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 25, "Lucky, greater"));
+	atlas.push_back(Item(26, 45, "Reliable, greater"));
+	atlas.push_back(Item(46, 85, "Speed"));
+	atlas.push_back(Item(86, 94, "Brilliant energy"));
+	atlas.push_back(Item(95, 96, "Designating, greater"));
+	atlas.push_back(Item(97, 98, "Nimble shot"));
+	atlas.push_back(Item(99, 100, "Second chance"));
+	atlases.push_back(atlas);
+
+	// empty atlas for lv4
+	atlas.clear();
+	atlases.push_back(atlas);
+
+	// empty atlas for lv5
+	atlases.push_back(atlas);
 }
 void buildSpecifics(vector<vector<Item>> &atlases)
 {
-	vector<Item>;
+	vector<Item> atlas;
 	/*
 	          |Li|Gi|Le|Ge|La|Ga|
 	     Armor|00 01 02 03 04 05|
-	   Weapons|06 07 08 09 10 11|
+	    Shield|06 07 08 09 10 11|
+	   Weapons|12 13 14 15 16 17|
 	*/
+	atlas.push_back(Item(1, 100, "Mithral shirt"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 33, "Mistmail"));
+	atlas.push_back(Item(34, 66, "Otyugh hide"));
+	atlas.push_back(Item(67, 100, "Dragonhide plate"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 33, "Elven chain"));
+	atlas.push_back(Item(34, 66, "Rhino hide"));
+	atlas.push_back(Item(67, 100, "Morlock hide"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 15, "Adamantine breastplate"));
+	atlas.push_back(Item(16, 25, "Soothsayer's raiment"));
+	atlas.push_back(Item(26, 38, "Equestrian plate"));
+	atlas.push_back(Item(39, 50, "Enchanted eelskin"));
+	atlas.push_back(Item(51, 62, "Boneless leather"));
+	atlas.push_back(Item(63, 72, "Murderer's blackcloth"));
+	atlas.push_back(Item(73, 86, "Folding plate"));
+	atlas.push_back(Item(87, 100, "Breastplate of vanishing"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 13, "Armor of insults"));
+	atlas.push_back(Item(14, 29, "Dwarven plate"));
+	atlas.push_back(Item(30, 45, "Banded mail of luck"));
+	atlas.push_back(Item(46, 58, "Catskin leather"));
+	atlas.push_back(Item(59, 71, "Celestial armor"));
+	atlas.push_back(Item(72, 84, "Buccaneer's breastplate"));
+	atlas.push_back(Item(85, 100, "Plate armor of the deep"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 10, "Breastplate of command"));
+	atlas.push_back(Item(11, 14, "Forsaken banded mail"));
+	atlas.push_back(Item(15, 24, "Mithral full plate of speed"));
+	atlas.push_back(Item(25, 28, "Warden of the woods"));
+	atlas.push_back(Item(29, 32, "Scarab breastplate"));
+	atlas.push_back(Item(33, 38, "Giant-hide armor (ogre)"));
+	atlas.push_back(Item(39, 42, "Hamatula hide"));
+	atlas.push_back(Item(43, 48, "Giant-hide armor (hill giant)"));
+	atlas.push_back(Item(49, 52, "Demon armor"));
+	atlas.push_back(Item(53, 58, "Giant-hide armor (stone, fire, or frost giant)"));
+	atlas.push_back(Item(59, 64, "Giant-hide armor (troll)"));
+	atlas.push_back(Item(65, 70, "Mail of malevolence"));
+	atlas.push_back(Item(71, 76, "Giant-hide armor (cloud giant)"));
+	atlas.push_back(Item(77, 82, "Giant-hide armor (storm giant)"));
+	atlas.push_back(Item(83, 88, "Daystar half-plate"));
+	atlas.push_back(Item(89, 96, "Invincible armor"));
+	atlas.push_back(Item(97, 100, "Prismatic plate"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Living steel heavy shield"));
+	atlas.push_back(Item(21, 45, "Darkwood buckler"));
+	atlas.push_back(Item(46, 70, "Darkwood shield"));
+	atlas.push_back(Item(71, 100, "Mithral heavy shield"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 30, "Zombie skin shield"));
+	atlas.push_back(Item(31, 75, "Caster's shield"));
+	atlas.push_back(Item(76, 100, "Burglar's buckler"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 35, "Spined shield"));
+	atlas.push_back(Item(36, 50, "Dragonslayer's shield"));
+	atlas.push_back(Item(51, 65, "Collapsible tower"));
+	atlas.push_back(Item(66, 100, "Lion's shield"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Caster shield, greater"));
+	atlas.push_back(Item(21, 40, "Celestial shield"));
+	atlas.push_back(Item(41, 60, "Maelstrom shield"));
+	atlas.push_back(Item(61, 80, "Volcanic shield"));
+	atlas.push_back(Item(81, 100, "Tempest shield"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Battlement shield"));
+	atlas.push_back(Item(21, 40, "Winged shield"));
+	atlas.push_back(Item(41, 60, "Avalanche shield"));
+	atlas.push_back(Item(61, 80, "Fortress shield"));
+	atlas.push_back(Item(81, 100, "Wyrmslayer's shield"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Spell ward tower shield"));
+	atlas.push_back(Item(21, 35, "Quick block buckler"));
+	atlas.push_back(Item(36, 50, "Belligerent shield"));
+	atlas.push_back(Item(51, 65, "Force tower"));
+	atlas.push_back(Item(66, 85, "Absorbing shield"));
+	atlas.push_back(Item(86, 100, "Elysian shield"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 2, "Tracer bullet"));
+	atlas.push_back(Item(3, 8, "Sleep arrow"));
+	atlas.push_back(Item(9, 10, "Dustburst bullet"));
+	atlas.push_back(Item(11, 16, "Tangle bolt"));
+	atlas.push_back(Item(17, 22, "Screaming bolt"));
+	atlas.push_back(Item(23, 32, "Masterwork silver dagger"));
+	atlas.push_back(Item(33, 34, "Alchemist's bullet"));
+	atlas.push_back(Item(35, 44, "Cold iron masterwork longsword"));
+	atlas.push_back(Item(45, 50, "Hushing arrow"));
+	atlas.push_back(Item(51, 56, "Hushing arrow, greater"));
+	atlas.push_back(Item(57, 66, "Javelin of lightning"));
+	atlas.push_back(Item(67, 74, "Searing arrow"));
+	atlas.push_back(Item(75, 82, "Sizzling arrow"));
+	atlas.push_back(Item(83, 84, "Burrowing bullet, lesser"));
+	atlas.push_back(Item(85, 92, "Dust bolt"));
+	atlas.push_back(Item(93, 100, "Slaying arrow"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 20, "Adamantine dagger"));
+	atlas.push_back(Item(21, 40, "Adamantine battleaxe"));
+	atlas.push_back(Item(41, 50, "Burrowing bullet, greater"));
+	atlas.push_back(Item(51, 70, "Slaying arrow, greater"));
+	atlas.push_back(Item(71, 80, "Lance of jousting"));
+	atlas.push_back(Item(81, 100, "Shatterspike"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 3, "Bloodletting kukri"));
+	atlas.push_back(Item(4, 9, "Boulderhead mace"));
+	atlas.push_back(Item(10, 14, "Beaststrike club"));
+	atlas.push_back(Item(15, 20, "Fighter's fork"));
+	atlas.push_back(Item(21, 23, "Everflowing aspergillum"));
+	atlas.push_back(Item(24, 28, "Hurricane quarterstaff"));
+	atlas.push_back(Item(29, 34, "Dagger of venom"));
+	atlas.push_back(Item(35, 39, "Gloom blade"));
+	atlas.push_back(Item(40, 44, "Frostbite sling"));
+	atlas.push_back(Item(45, 49, "Trident of stability"));
+	atlas.push_back(Item(50, 54, "Trident of warning"));
+	atlas.push_back(Item(55, 60, "Assassin's dagger"));
+	atlas.push_back(Item(61, 66, "Dagger of doubling"));
+	atlas.push_back(Item(67, 71, "Earthenflail"));
+	atlas.push_back(Item(72, 79, "Swift obsidian greataxe"));
+	atlas.push_back(Item(80, 85, "Polarity hammer"));
+	atlas.push_back(Item(86, 93, "Blade of binding"));
+	atlas.push_back(Item(94, 100, "Shifter's sorrow"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 7, "Dragoncatch guisarme"));
+	atlas.push_back(Item(8, 15, "Ten-ring sword"));
+	atlas.push_back(Item(16, 21, "Triton's trident"));
+	atlas.push_back(Item(22, 29, "Mace of smiting, lesser"));
+	atlas.push_back(Item(30, 37, "Disarming blade"));
+	atlas.push_back(Item(38, 42, "Lash of the howler"));
+	atlas.push_back(Item(43, 47, "Shieldsplitter lance"));
+	atlas.push_back(Item(48, 53, "Trident of fish command"));
+	atlas.push_back(Item(54, 59, "Quarterstaff of vaulting"));
+	atlas.push_back(Item(60, 65, "Firedrake pistol"));
+	atlas.push_back(Item(66, 71, "Ricochet hammer"));
+	atlas.push_back(Item(72, 77, "Flame tongue"));
+	atlas.push_back(Item(78, 85, "Sparkwake starknife"));
+	atlas.push_back(Item(86, 90, "Luck blade (0 wishes)"));
+	atlas.push_back(Item(91, 95, "Sword of subtlety"));
+	atlas.push_back(Item(96, 100, "Sword of the planes"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 12, "Nine lives stealer"));
+	atlas.push_back(Item(13, 26, "Undercutting axe"));
+	atlas.push_back(Item(27, 40, "Spirit caller"));
+	atlas.push_back(Item(41, 55, "Dwarfbond hammer"));
+	atlas.push_back(Item(56, 70, "Oathbow"));
+	atlas.push_back(Item(71, 85, "Sword of life stealing"));
+	atlas.push_back(Item(86, 100, "Cutthroat's apprentice"));
+	atlases.push_back(atlas);
+
+	atlas.clear();
+	atlas.push_back(Item(1, 2, "Ghoul's lament"));
+	atlas.push_back(Item(3, 5, "Mace of terror"));
+	atlas.push_back(Item(6, 7, "Hellscourge"));
+	atlas.push_back(Item(8, 9, "Dragon's doom"));
+	atlas.push_back(Item(10, 13, "Life-drinker"));
+	atlas.push_back(Item(14, 16, "Valor's minion"));
+	atlas.push_back(Item(17, 18, "Summoner's sorrow"));
+	atlas.push_back(Item(19, 21, "Sylvan scimitar"));
+	atlas.push_back(Item(22, 23, "Spirit blade"));
+	atlas.push_back(Item(24, 26, "Heartswood spear"));
+	atlas.push_back(Item(27, 29, "Rapier of puncturing"));
+	atlas.push_back(Item(30, 32, "Sun blade"));
+	atlas.push_back(Item(33, 37, "Blade of the rising sun"));
+	atlas.push_back(Item(38, 40, "Frost brand"));
+	atlas.push_back(Item(41, 45, "Dwarven thrower"));
+	atlas.push_back(Item(46, 50, "Bloodthirst dagger"));
+	atlas.push_back(Item(51, 53, "Warbringer"));
+	atlas.push_back(Item(54, 57, "Luck blade (1 wish)"));
+	atlas.push_back(Item(58, 61, "Guarding blade"));
+	atlas.push_back(Item(62, 64, "Pistol of the infinite sky"));
+	atlas.push_back(Item(65, 69, "Mace of smiting"));
+	atlas.push_back(Item(70, 73, "Blade of the sword-saint"));
+	atlas.push_back(Item(74, 76, "Scimitar of the spellthief"));
+	atlas.push_back(Item(77, 79, "Spider's fang"));
+	atlas.push_back(Item(80, 82, "Demonsorrow curve blade"));
+	atlas.push_back(Item(83, 85, "Void scythe"));
+	atlas.push_back(Item(86, 89, "Luck blade (2 wishes)"));
+	atlas.push_back(Item(90, 92, "Holy avenger"));
+	atlas.push_back(Item(93, 96, "Bastard's sting"));
+	atlas.push_back(Item(97, 100, "Luck blade (3 wishes)"));
+	atlases.push_back(atlas);
 }

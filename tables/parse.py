@@ -1,5 +1,5 @@
-of = open("armor.txt","w")
-with open("armor.csv","r") as fp:
+of = open("sWeapon.txt","w")
+with open("sWeapon.csv","r") as fp:
     for line in fp:
         if line != "\n":
             a,x,y = line.split("?")

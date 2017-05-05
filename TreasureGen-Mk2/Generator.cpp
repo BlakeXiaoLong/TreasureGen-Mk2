@@ -11,7 +11,7 @@ int main()
 {
 	srand((unsigned int)time(NULL));
 	buildEverything(armor, weapons, art, gems, wands, scrolls, potions, staffs, rods, rings, wondrous, effects, enchantments, specifics);
-	cout << armorGen(LMe, 10);
+	cout << weaponGen(GMa, 20);
 	return 0;
 }
 
@@ -24,7 +24,6 @@ int roll(int num, int die, int multiplier)
 }
 template <class T> T select(vector<vector<T>> atlases, int grade)
 {
-	stringstream ss;
 	int rollA = roll(1, 100);
 	vector<T> atlas = atlases.at(grade - 1);
 	for (int i = 0; i < atlas.size(); i++)
@@ -122,8 +121,7 @@ string scrollGen(Grade grade, int num)
 		else if (rollB <= 90) { common = true; arcane = false; }
 		else if (rollB <= 100) { common = false; arcane = false; }
 
-		level = (level * 2) + (common ? 0 : 1) + (arcane ? 0 : 20);
-		LevelledItem o = select(scrolls, level + 1);
+		LevelledItem o = select(scrolls, (level * 2) + (common ? 0 : 1) + (arcane ? 0 : 20) + 1);
 		ss << o.name << " (level " << o.level << ")\n";
 	}
 	return ss.str();
@@ -167,8 +165,7 @@ string wandGen(Grade grade, int num)
 		if (rollB <= 70) common = true;
 		else if (rollB <= 100) common = false;
 
-		level = (level * 2) + (common ? 0 : 1);
-		LevelledItem o = select(wands, level + 1);
+		LevelledItem o = select(wands, (level * 2) + (common ? 0 : 1) + 1);
 		ss << o.name << " (level " << o.level << ")\n";
 	}
 	return ss.str();
@@ -214,8 +211,7 @@ string potionGen(Grade grade, int num)
 		if (rollB <= 75)common = true;
 		else if (rollB <= 100 && level != 0) common = false;
 
-		level = (level * 2) + (common ? 0 : 1);
-		LevelledItem o = select(potions, level + 1);
+		LevelledItem o = select(potions, (level * 2) + (common ? 0 : 1) + 1);
 		ss << o.name << " (level " << o.level << ")\n";
 	}
 	return ss.str();
@@ -227,31 +223,37 @@ string armorGen(Grade grade, int num)
 	{
 		Armor o;
 		int rollA = roll(1, 100), rollB = roll(1, 100);
-		for (int j = 0; j < armor.size(); j++) if (rollA <= armor.at(i).end) { o.name = armor.at(i).name; o.type = armor.at(i).type; }
+		for (int j = 0; j < armor.size(); j++) if (rollA <= armor.at(j).end) { o.name = armor.at(j).name; o.type = armor.at(j).type; break; }
 		if (o.name == "") ss << armorGen(grade, 1);
 		else
 		{
 			switch (grade)
 			{
+			case mwk:
+				o.name = "Masterwork " + o.name;
+				break;
 			case LMi:
 				if (rollB <= 80) o.enb = 1;
-				else if (rollB <= 100) { /* LMi specific */ }
+				else if (rollB <= 90) { o.specific = true; o.name = select(specifics, LMi).name; } // specific armor
+				else { o.specific = true; o.name = select(specifics, LMi + 6).name; } // specific shield
 				break;
 			case GMi:
 				if (rollB <= 26) o.enb = 1;
 				else if (rollB <= 53) o.enb = 2;
 				else if (rollB <= 80) { o.enb = 1; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
-				else if (rollB <= 100) { /* GMi specific */ }
+				else if (rollB <= 90) { o.specific = true; o.name = select(specifics, GMi).name; } // specific armor
+				else { o.specific = true; o.name = select(specifics, GMi + 6).name; } // specific shield
 				break;
 			case LMe:
 				if (rollB <= 10) o.enb = 1;
 				else if (rollB <= 20) o.enb = 2;
 				else if (rollB <= 32) o.enb = 3;
 				else if (rollB <= 44) { o.enb = 1; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
-				else if (rollB <= 56) { o.enb = 1; for (int i = 0; i < 2; i++) { o.enh += select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; } }
+				else if (rollB <= 56) { o.enb = 1; for (int j = 0; j < 2; j++) { o.enh += select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; } }
 				else if (rollB <= 68) { o.enb = 1; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 2).name + " "; }
 				else if (rollB <= 80) { o.enb = 2; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
-				else if (rollB <= 100) {/* LMe specific */ }
+				else if (rollB <= 90) { o.specific = true; o.name = select(specifics, LMe).name; } // specific armor
+				else { o.specific = true; o.name = select(specifics, LMe + 6).name; } // specific shield
 				break;
 			case GMe:
 				if (rollB <= 10) o.enb = 2;
@@ -261,7 +263,8 @@ string armorGen(Grade grade, int num)
 				else if (rollB <= 56) { o.enb = 2; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
 				else if (rollB <= 68) { o.enb = 2; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 2).name + " "; }
 				else if (rollB <= 80) { o.enb = 3; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
-				else if (rollB <= 100) { /* GMe specific */ }
+				else if (rollB <= 90) { o.specific = true; o.name = select(specifics, GMe).name; } // specific armor
+				else { o.specific = true; o.name = select(specifics, GMe + 6).name; } // specific shield
 				break;
 			case LMa:
 				if (rollB <= 10) o.enb = 3;
@@ -271,7 +274,8 @@ string armorGen(Grade grade, int num)
 				else if (rollB <= 56) { o.enb = 2; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 2).name + " "; }
 				else if (rollB <= 68) { o.enb = 3; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
 				else if (rollB <= 80) { o.enb = 4; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
-				else if (rollB <= 100) { /* LMa specific */ }
+				else if (rollB <= 90) { o.specific = true; o.name = select(specifics, LMa).name; } // specific armor
+				else { o.specific = true; o.name = select(specifics, LMa + 6).name; } // specific shield
 				break;
 			case GMa:
 				if (rollB <= 10) o.enb = 4;
@@ -283,14 +287,16 @@ string armorGen(Grade grade, int num)
 				else if (rollB <= 59) { o.enb = 5; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 1).name + " "; }
 				else if (rollB <= 67) { o.enb = 5; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 2).name + " "; }
 				else if (rollB <= 71) { o.enb = 5; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 3).name + " "; }
-				else if (rollB <= 74) { o.enb = 5; for (int i = 0; i < 2; i++) { o.enh += select(enchantments, (o.type == Armor::shield ? 5 : 0) + 2).name + " "; } }
+				else if (rollB <= 74) { o.enb = 5; for (int j = 0; j < 2; j++) { o.enh += select(enchantments, (o.type == Armor::shield ? 5 : 0) + 2).name + " "; } }
 				else if (rollB <= 77) { o.enb = 5; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 4).name + " "; }
 				else if (rollB <= 80) { o.enb = 5; o.enh = select(enchantments, (o.type == Armor::shield ? 5 : 0) + 5).name + " "; }
-				else if (rollB <= 100) { /* GMa specific */ }
+				else if (rollB <= 90) { o.specific = true; o.name = select(specifics, GMa).name; } // specific armor
+				else { o.specific = true; o.name = select(specifics, GMa + 6).name; } // specific shield
 				break;
 			}
-			if (o.enb) ss << "+" << o.enb << " ";
-			ss << o.enh << o.name << endl;
+			if (o.specific) ss << o.name << endl;
+			else if (o.enh == " ") ss << armorGen(grade, 1);
+			else { if (o.enb) ss << "+" << o.enb << " "; ss << o.enh << o.name << endl; }
 		}
 	}
 	return ss.str();
@@ -298,7 +304,81 @@ string armorGen(Grade grade, int num)
 string weaponGen(Grade grade, int num)
 {
 	stringstream ss;
-
+	for (int i = 0; i < num; i++)
+	{
+		Weapon o;
+		int rollA = roll(1, 100), rollB = roll(1, 100);
+		for (int j = 0; j < weapons.size(); j++) if (rollA <= weapons.at(j).end) { o.name = weapons.at(j).name; o.type = weapons.at(j).type; break; }
+		if (o.name == "")
+			ss << weaponGen(grade, 1);
+		else
+		{
+			switch(grade)
+			{
+			case mwk:
+				o.name = "Masterwork " + o.name;
+				break;
+			case LMi:
+				if (rollB <= 80) o.enb = 1;
+				else { o.specific = true; o.name = select(specifics, LMi + 12).name; }
+				break;
+			case GMi:
+				if (rollB <= 26) o.enb = 1;
+				else if (rollB <= 53) o.enb = 2;
+				else if (rollB <= 80) { o.enb = 1, o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else { o.specific = true; o.name = select(specifics, GMi + 12).name; }
+				break;
+			case LMe:
+				if (rollB <= 10) o.enb = 1;
+				else if (rollB <= 20) o.enb = 2;
+				else if (rollB <= 32) o.enb = 3;
+				else if (rollB <= 44) { o.enb = 1, o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 56) { o.enb = 1; for (int j = 0; j < 2; j++) { o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; } }
+				else if (rollB < 68) { o.enb = 1; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 80) { o.enb = 2; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else { o.specific = true; o.name = select(specifics, LMe + 12).name; }
+				break;
+			case GMe:
+				if (rollB <= 10) o.enb = 2;
+				else if (rollB <= 22) o.enb = 3;
+				else if (rollB <= 32) { o.enb = 1; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 44) { o.enb = 1; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 56) { o.enb = 2; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 68) { o.enb = 2; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 80) { o.enb = 3; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else { o.specific = true; o.name = select(specifics, GMe + 12).name; }
+				break;
+			case LMa:
+				if (rollB <= 10) o.enb = 3;
+				else if (rollB <= 22) o.enb = 4;
+				else if (rollB <= 32) { o.enb = 1; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 44) { o.enb = 1; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 2).name + " "; }
+				else if (rollB <= 56) { o.enb = 2; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 68) { o.enb = 3; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 80) { o.enb = 4; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else { o.specific = true; o.name = select(specifics, LMa + 12).name; }
+				break;
+			case GMa:
+				if (rollB <= 10) o.enb = 4;
+				else if (rollB <= 20) o.enb = 5;
+				else if (rollB <= 30) { o.enb = 4; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 38) { o.enb = 4; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 46) { o.enb = 4; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 2).name + " "; }
+				else if (rollB <= 51) { o.enb = 4; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 3).name + " "; }
+				else if (rollB <= 59) { o.enb = 5; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 67) { o.enb = 5; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else if (rollB <= 71) { o.enb = 5; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 2).name + " "; }
+				else if (rollB <= 74) { o.enb = 5; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 3).name + " "; }
+				else if (rollB <= 77) { o.enb = 5; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 3).name + " "; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10)).name + " "; }
+				else if (rollB <= 80) { o.enb = 5; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 2).name + " "; o.enh = select(enchantments, (o.type == Weapon::ranged ? 15 : 10) + 1).name + " "; }
+				else { o.specific = true; o.name = select(specifics, GMa + 12).name; }
+				break;
+			}
+			if (o.specific) ss << o.name << endl;
+			else if (o.enh == " ") ss << weaponGen(grade, 1);
+			else { if (o.enb) ss << "+" << o.enb << " "; ss << o.enh << o.name << endl; }
+		}
+	}
 	return ss.str();
 }
 string ringGen(Grade grade, int num)

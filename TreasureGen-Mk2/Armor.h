@@ -8,6 +8,7 @@ public:
 	Type type;
 	int enb = 0;
 	string enh = "";
+	bool specific = false;
 
 	Armor()
 	{
