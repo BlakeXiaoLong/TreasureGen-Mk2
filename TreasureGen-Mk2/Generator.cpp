@@ -11,10 +11,133 @@ int main()
 {
 	srand((unsigned int)time(NULL));
 	buildEverything(armor, weapons, art, gems, wands, scrolls, potions, staffs, rods, rings, wondrous, effects, enchantments, specifics);
-	cout << weaponGen(GMa, 20);
-	return 0;
+	generate(setup());
 }
 
+void cls()
+{
+	HANDLE                     hStdOut;
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	DWORD                      count;
+	DWORD                      cellCount;
+	COORD                      homeCoords = { 0, 0 };
+
+	hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	if (hStdOut == INVALID_HANDLE_VALUE) return;
+
+	/* Get the number of cells in the current buffer */
+	if (!GetConsoleScreenBufferInfo(hStdOut, &csbi)) return;
+	cellCount = csbi.dwSize.X *csbi.dwSize.Y;
+
+	/* Fill the entire buffer with spaces */
+	if (!FillConsoleOutputCharacter(
+		hStdOut,
+		(TCHAR) ' ',
+		cellCount,
+		homeCoords,
+		&count
+	)) return;
+
+	/* Fill the entire buffer with the current colors and attributes */
+	if (!FillConsoleOutputAttribute(
+		hStdOut,
+		csbi.wAttributes,
+		cellCount,
+		homeCoords,
+		&count
+	)) return;
+
+	/* Move the cursor home */
+	SetConsoleCursorPosition(hStdOut, homeCoords);
+}
+int setup()
+{
+	int npcVal[20] = { 260, 390, 780, 1650, 2400, 3450, 4650, 6000, 7800, 10050, 12750, 16350, 21000, 27000, 34800, 45000, 58500, 75000, 96000, 123000 };
+	int crVal[20]  = { 400, 800, 1200, 1700, 2300, 3000, 3900, 5000, 6400, 8200, 10500, 13500, 17500, 22000, 29000, 38000, 48000, 62000, 79000, 100000 };
+	int CR = 0, modifier = 0, value = 0;
+
+	do
+	{
+		cout << "What CR was the encounter?\n";
+		cin >> CR;
+		cls();
+		if (CR < 1 || CR > 20)
+			cout << "Invalid response. Please enter an integer between 1 and 20\n\n";
+	} while (CR < 1 || CR > 20);
+
+	do
+	{
+		cout << "What level of trasure do you want this encounter to generate?\n";
+		cout << "1. Incidental (50%)\n";
+		cout << "2. Normal (100%)\n";
+		cout << "3. Double (200%)\n";
+		cout << "4. Triple (300%)\n";
+		cout << "5. NPC Treasure\n";
+		cin >> modifier;
+		cls();
+		if (modifier < 1 || modifier > 5)
+			cout << "Invalid response. Please enter an integer between 1 and 5\n\n";
+	} while (modifier < 1 || modifier > 5);
+
+	if (modifier == 5)
+	{
+		int level = 0, n = 0;
+		cout << "How many NPCs were there?";
+		cin >> n;
+		for (int i = 0; i < n; i++)
+		{
+			do
+			{
+				cout << "What level was the NPC?";
+				cin >> level;
+				cls();
+				if (level < 1 || level > 20)
+					cout << "Invalid response. Please enter a number between 1 and 20\n\n";
+			} while (level < 1 || level > 20);
+			value += npcVal[level - 1];
+		}
+	}
+	else value = crVal[CR - 1] * modifier;
+	return value;
+}
+void generate(int value)
+{
+	int type = 0;
+	do
+	{
+		cout << "What type of treasure would you like to generate?\n";
+		cout << "1. Coins\n";
+		cout << "\tTreasure of this type consists entirely of coins\n";
+		cout << "\tCarried By: Aberration, Animal, Dragon, Humanoid, Magical Beast, Monstrous Humanoid, Ooze, Outsider, Plant, Undead, Vermin\n";
+		cout << "2. Coins and Gems\n";
+		cout << "\tThis type also includes gemstones, some of which can be quite valuable\n";
+		cout << "\tCarried By: Aberration, Animal, Construct, Dragon, Fey, Humanoid, Magical Beast, Monstrous Humanoid, Ooze, Outsider, Plant, Undead, Vermin\n";
+		cout << "3. Art Objects\n";
+		cout << "\tThese items are valuable for their beauty and craftsmanship\n\t and are made with precious metals, gems, and other fine materials\n";
+		cout << "\tCarried By: Construct, Dragon, Fey, Monstrous Humanoid, Outsider\n";
+		cout << "4. Coins and Small Objects\n";
+		cout << "\tCoins and small magic items, such as potions, rings, scrolls, and wands\n";
+		cout << "\tCarried By: Aberration, Animal, Fey, Humanoid, Magical Beast, Monstrous Humanoid, Ooze, Outsider, Plant, Undead, Vermin\n";
+		cout << "5. Armor and Weapons\n";
+		cout << "\tSolely Weapons and Armor\n";
+		cout << "\tCarried By: Aberration, Animal, Construct, Humanoid, Magical Beast, Monstrous Humanoid, Outsider, Plant, Undead\n";
+		cout << "6. Combatant Gear\n";
+		cout << "\tArmor, coins, potions, weapons, and wondrous items\n";
+		cout << "\tCarried By: Aberration, Construct, Humanoid, Undead\n";
+		cout << "7. Spellcaster Gear\n";
+		cout << "\tCoins, potions, scrolls, staves, wands, and other wondrous items\n";
+		cout << "\tCarried By: Aberration, Fey, Humanoid, Outsider, Undead\n";
+		cout << "8. Lair Treasure\n";
+		cout << "\tA large number of magic items, coins, and other valuables\n";
+		cout << "\tCarried By: Aberration, Construct, Dragon, Humanoid, Monstrous Humanoid, Outsider\n";
+		cout << "9. Treasure Hoard\n";
+		cout << "\tThis can contain virtually any type of item\n";
+		cout << "\tCarried By: Dragon, Outsider\n";
+		cin >> type;
+		if (type < 1 || type > 9)
+			cout << "Invalid response. Please enter an integer between 1 and 9\n\n";
+	} while (type < 1 || type > 9);
+}
 int roll(int num, int die, int multiplier)
 {
 	int result = 0;
@@ -223,7 +346,13 @@ string armorGen(Grade grade, int num)
 	{
 		Armor o;
 		int rollA = roll(1, 100), rollB = roll(1, 100);
-		for (int j = 0; j < armor.size(); j++) if (rollA <= armor.at(j).end) { o.name = armor.at(j).name; o.type = armor.at(j).type; break; }
+		for (int j = 0; j < armor.size(); j++)
+			if (rollA <= armor.at(j).end)
+			{
+				o.name = armor.at(j).name;
+				o.type = armor.at(j).type;
+				break;
+			}
 		if (o.name == "") ss << armorGen(grade, 1);
 		else
 		{

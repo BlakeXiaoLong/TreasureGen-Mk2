@@ -17,6 +17,9 @@
 
 enum Coin { cp, sp, gp, pp }; // ranges from 0 to 3
 enum Grade { mwk, LMi, GMi, LMe, GMe, LMa, GMa }; // ranges from 0 to 6
+void cls();
+int setup();
+void generate(int value);
 int roll(int num, int die, int multiplier = 1);
 template <class T> T select(vector<vector<T>> atlases, int grade);
 string coinGen(int num, int die, Coin coin = gp, int multiplier = 1);
